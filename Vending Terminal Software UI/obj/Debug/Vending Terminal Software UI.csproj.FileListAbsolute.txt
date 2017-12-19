@@ -1,0 +1,59 @@
+C:\Users\theco\Downloads\Vending Terminal Software New\Vending Terminal Software UI\obj\Debug\Vending Terminal Software UI.csprojResolveAssemblyReference.cache
+C:\Users\theco\Downloads\Vending Terminal Software New\Vending Terminal Software UI\obj\Debug\Windows\AddMoney.g.cs
+C:\Users\theco\Downloads\Vending Terminal Software New\Vending Terminal Software UI\obj\Debug\MainWindow.g.cs
+C:\Users\theco\Downloads\Vending Terminal Software New\Vending Terminal Software UI\obj\Debug\PagesFolder\VM.g.cs
+C:\Users\theco\Downloads\Vending Terminal Software New\Vending Terminal Software UI\obj\Debug\Windows\Supplier9000.g.cs
+C:\Users\theco\Downloads\Vending Terminal Software New\Vending Terminal Software UI\obj\Debug\App.g.cs
+C:\Users\theco\Downloads\Vending Terminal Software New\Vending Terminal Software UI\obj\Debug\Vending Terminal Software UI_MarkupCompile.cache
+C:\Users\theco\Downloads\Vending Terminal Software New\Vending Terminal Software UI\obj\Debug\Vending Terminal Software UI_MarkupCompile.lref
+C:\Users\theco\Downloads\Vending Terminal Software New\Vending Terminal Software UI\bin\Debug\Vending Terminal Software UI.exe.config
+C:\Users\theco\Downloads\Vending Terminal Software New\Vending Terminal Software UI\bin\Debug\Vending Terminal Software UI.exe
+C:\Users\theco\Downloads\Vending Terminal Software New\Vending Terminal Software UI\bin\Debug\Vending Terminal Software UI.pdb
+C:\Users\theco\Downloads\Vending Terminal Software New\Vending Terminal Software UI\bin\Debug\EntityFramework.dll
+C:\Users\theco\Downloads\Vending Terminal Software New\Vending Terminal Software UI\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\theco\Downloads\Vending Terminal Software New\Vending Terminal Software UI\bin\Debug\Vending Terminal Software Classes.dll
+C:\Users\theco\Downloads\Vending Terminal Software New\Vending Terminal Software UI\bin\Debug\Newtonsoft.Json.dll
+C:\Users\theco\Downloads\Vending Terminal Software New\Vending Terminal Software UI\bin\Debug\Vending Terminal Software Classes.pdb
+C:\Users\theco\Downloads\Vending Terminal Software New\Vending Terminal Software UI\bin\Debug\Vending Terminal Software Classes.dll.config
+C:\Users\theco\Downloads\Vending Terminal Software New\Vending Terminal Software UI\bin\Debug\EntityFramework.xml
+C:\Users\theco\Downloads\Vending Terminal Software New\Vending Terminal Software UI\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\theco\Downloads\Vending Terminal Software New\Vending Terminal Software UI\bin\Debug\Newtonsoft.Json.xml
+C:\Users\theco\Downloads\Vending Terminal Software New\Vending Terminal Software UI\obj\Debug\Windows\AddMoney.baml
+C:\Users\theco\Downloads\Vending Terminal Software New\Vending Terminal Software UI\obj\Debug\MainWindow.baml
+C:\Users\theco\Downloads\Vending Terminal Software New\Vending Terminal Software UI\obj\Debug\PagesFolder\VM.baml
+C:\Users\theco\Downloads\Vending Terminal Software New\Vending Terminal Software UI\obj\Debug\Windows\Supplier9000.baml
+C:\Users\theco\Downloads\Vending Terminal Software New\Vending Terminal Software UI\obj\Debug\Vending Terminal Software UI.g.resources
+C:\Users\theco\Downloads\Vending Terminal Software New\Vending Terminal Software UI\obj\Debug\Vending_Terminal_Software_UI.Properties.Resources.resources
+C:\Users\theco\Downloads\Vending Terminal Software New\Vending Terminal Software UI\obj\Debug\Vending Terminal Software UI.csproj.GenerateResource.Cache
+C:\Users\theco\Downloads\Vending Terminal Software New\Vending Terminal Software UI\obj\Debug\Vending Terminal Software UI.csproj.CoreCompileInputs.cache
+C:\Users\theco\Downloads\Vending Terminal Software New\Vending Terminal Software UI\obj\Debug\Vending Terminal Software UI.exe
+C:\Users\theco\Downloads\Vending Terminal Software New\Vending Terminal Software UI\obj\Debug\Vending Terminal Software UI.pdb
+C:\Users\Ronald\AppData\Local\Temp\Vending Terminal Software\Vending Terminal Software UI\bin\Debug\Vending Terminal Software UI.exe.config
+C:\Users\Ronald\AppData\Local\Temp\Vending Terminal Software\Vending Terminal Software UI\bin\Debug\Vending Terminal Software UI.exe
+C:\Users\Ronald\AppData\Local\Temp\Vending Terminal Software\Vending Terminal Software UI\bin\Debug\Vending Terminal Software UI.pdb
+C:\Users\Ronald\AppData\Local\Temp\Vending Terminal Software\Vending Terminal Software UI\bin\Debug\EntityFramework.dll
+C:\Users\Ronald\AppData\Local\Temp\Vending Terminal Software\Vending Terminal Software UI\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Ronald\AppData\Local\Temp\Vending Terminal Software\Vending Terminal Software UI\bin\Debug\Vending Terminal Software Classes.dll
+C:\Users\Ronald\AppData\Local\Temp\Vending Terminal Software\Vending Terminal Software UI\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Ronald\AppData\Local\Temp\Vending Terminal Software\Vending Terminal Software UI\bin\Debug\Vending Terminal Software Classes.pdb
+C:\Users\Ronald\AppData\Local\Temp\Vending Terminal Software\Vending Terminal Software UI\bin\Debug\Vending Terminal Software Classes.dll.config
+C:\Users\Ronald\AppData\Local\Temp\Vending Terminal Software\Vending Terminal Software UI\bin\Debug\EntityFramework.xml
+C:\Users\Ronald\AppData\Local\Temp\Vending Terminal Software\Vending Terminal Software UI\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Ronald\AppData\Local\Temp\Vending Terminal Software\Vending Terminal Software UI\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Ronald\AppData\Local\Temp\Vending Terminal Software\Vending Terminal Software UI\obj\Debug\Vending Terminal Software UI.csprojResolveAssemblyReference.cache
+C:\Users\Ronald\AppData\Local\Temp\Vending Terminal Software\Vending Terminal Software UI\obj\Debug\Windows\AddMoney.g.cs
+C:\Users\Ronald\AppData\Local\Temp\Vending Terminal Software\Vending Terminal Software UI\obj\Debug\MainWindow.g.cs
+C:\Users\Ronald\AppData\Local\Temp\Vending Terminal Software\Vending Terminal Software UI\obj\Debug\PagesFolder\VM.g.cs
+C:\Users\Ronald\AppData\Local\Temp\Vending Terminal Software\Vending Terminal Software UI\obj\Debug\Windows\Supplier9000.g.cs
+C:\Users\Ronald\AppData\Local\Temp\Vending Terminal Software\Vending Terminal Software UI\obj\Debug\App.g.cs
+C:\Users\Ronald\AppData\Local\Temp\Vending Terminal Software\Vending Terminal Software UI\obj\Debug\Vending Terminal Software UI_MarkupCompile.cache
+C:\Users\Ronald\AppData\Local\Temp\Vending Terminal Software\Vending Terminal Software UI\obj\Debug\Vending Terminal Software UI_MarkupCompile.lref
+C:\Users\Ronald\AppData\Local\Temp\Vending Terminal Software\Vending Terminal Software UI\obj\Debug\Windows\AddMoney.baml
+C:\Users\Ronald\AppData\Local\Temp\Vending Terminal Software\Vending Terminal Software UI\obj\Debug\MainWindow.baml
+C:\Users\Ronald\AppData\Local\Temp\Vending Terminal Software\Vending Terminal Software UI\obj\Debug\PagesFolder\VM.baml
+C:\Users\Ronald\AppData\Local\Temp\Vending Terminal Software\Vending Terminal Software UI\obj\Debug\Windows\Supplier9000.baml
+C:\Users\Ronald\AppData\Local\Temp\Vending Terminal Software\Vending Terminal Software UI\obj\Debug\Vending Terminal Software UI.g.resources
+C:\Users\Ronald\AppData\Local\Temp\Vending Terminal Software\Vending Terminal Software UI\obj\Debug\Vending_Terminal_Software_UI.Properties.Resources.resources
+C:\Users\Ronald\AppData\Local\Temp\Vending Terminal Software\Vending Terminal Software UI\obj\Debug\Vending Terminal Software UI.csproj.GenerateResource.Cache
+C:\Users\Ronald\AppData\Local\Temp\Vending Terminal Software\Vending Terminal Software UI\obj\Debug\Vending Terminal Software UI.exe
+C:\Users\Ronald\AppData\Local\Temp\Vending Terminal Software\Vending Terminal Software UI\obj\Debug\Vending Terminal Software UI.pdb
