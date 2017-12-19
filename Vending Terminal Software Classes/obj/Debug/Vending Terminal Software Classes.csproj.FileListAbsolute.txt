@@ -1,0 +1,13 @@
+C:\Users\theco\Downloads\Vending Terminal Software New\Vending Terminal Software Classes\obj\Debug\Vending Terminal Software Classes.csprojResolveAssemblyReference.cache
+C:\Users\theco\Downloads\Vending Terminal Software New\Vending Terminal Software Classes\obj\Debug\Vending Terminal Software Classes.csproj.CoreCompileInputs.cache
+C:\Users\theco\Downloads\Vending Terminal Software New\Vending Terminal Software Classes\bin\Debug\Vending Terminal Software Classes.dll.config
+C:\Users\theco\Downloads\Vending Terminal Software New\Vending Terminal Software Classes\bin\Debug\Vending Terminal Software Classes.dll
+C:\Users\theco\Downloads\Vending Terminal Software New\Vending Terminal Software Classes\bin\Debug\Vending Terminal Software Classes.pdb
+C:\Users\theco\Downloads\Vending Terminal Software New\Vending Terminal Software Classes\bin\Debug\EntityFramework.dll
+C:\Users\theco\Downloads\Vending Terminal Software New\Vending Terminal Software Classes\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\theco\Downloads\Vending Terminal Software New\Vending Terminal Software Classes\bin\Debug\Newtonsoft.Json.dll
+C:\Users\theco\Downloads\Vending Terminal Software New\Vending Terminal Software Classes\bin\Debug\EntityFramework.xml
+C:\Users\theco\Downloads\Vending Terminal Software New\Vending Terminal Software Classes\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\theco\Downloads\Vending Terminal Software New\Vending Terminal Software Classes\bin\Debug\Newtonsoft.Json.xml
+C:\Users\theco\Downloads\Vending Terminal Software New\Vending Terminal Software Classes\obj\Debug\Vending Terminal Software Classes.dll
+C:\Users\theco\Downloads\Vending Terminal Software New\Vending Terminal Software Classes\obj\Debug\Vending Terminal Software Classes.pdb
