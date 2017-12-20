@@ -33,7 +33,7 @@ namespace Vending_Terminal_Software_UI.PagesFolder
 
         private void listBoxSupplies_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (listBoxSupplies.SelectedItem is Product p)
+            if (listBoxSupplies.SelectedItem is CurrentProduct p)
             {
                 VME.pCopy = p;
                 Refresh();
@@ -58,22 +58,25 @@ namespace Vending_Terminal_Software_UI.PagesFolder
 
         private void ProductsAdd_Click(object sender, RoutedEventArgs e)
         {
-            Supplier9000 Supp = new Supplier9000(VME);
+            Supplier9000 Supp = new Supplier9000(VME, VME.context);
             Supp.ShowDialog();
         }
 
         private void Refresh()
         {
-            listBoxSupplies.ItemsSource = VME.Data.CurrentState.Product;
+            listBoxSupplies.ItemsSource = VME.Data.GetData();
 
-            Current.Text = VME.Data.CurrentState.Money.ToString();
-            
+            using (var context = new Context())
+            {
+                Current.Text = context.CurrentStates.First(n => n.Location == VME.TerminalLocation).Money.ToString();
+            }
+
             if (VME.CanBeBought() == true)
                 Buy.IsEnabled = true;
             else
                 Buy.IsEnabled = false;
-
-            if (VME.Data.CurrentState.Money > 0)
+            
+            if (VME.context.CurrentStates.First(n => n.Location == VME.TerminalLocation).Money > 0)
                 Change.IsEnabled = true;
             else
                 Change.IsEnabled = false;
@@ -86,7 +89,15 @@ namespace Vending_Terminal_Software_UI.PagesFolder
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
+            VME.TerminalLocation = ((App)Application.Current).Location;
+            VME.Data.TerminalLocation = ((App)Application.Current).Location;
+
             Refresh();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(Pages.SelectVM);
         }
     }
 }

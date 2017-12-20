@@ -46,7 +46,7 @@ namespace Vending_Terminal_Software_UI
 
         private void Refresh()
         {
-            Current.Text = vme.Data.CurrentState.Money.ToString();
+            Current.Text = vme.context.CurrentStates.First(n => n.Location == ((App)Application.Current).Location).Money.ToString();
         }
     }
 }

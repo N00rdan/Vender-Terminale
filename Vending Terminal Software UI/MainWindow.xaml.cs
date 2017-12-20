@@ -17,7 +17,7 @@ namespace Vending_Terminal_Software_UI
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            frameMain.Navigate(Pages.VM);
+            frameMain.Navigate(Pages.SelectVM);
         }
     }
 }

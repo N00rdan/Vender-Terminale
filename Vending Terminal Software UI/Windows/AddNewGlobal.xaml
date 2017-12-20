@@ -1,0 +1,32 @@
+﻿<Window x:Class="Vending_Terminal_Software_UI.AddNewGlobal"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Vending_Terminal_Software_UI"
+        mc:Ignorable="d"
+        Title="AddNewGlobal" Height="300" Width="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <TextBox Text="Full Name" Margin="5" Grid.Row="0" HorizontalAlignment="Center"/>
+        <TextBox Name="FullName" HorizontalAlignment="Stretch" Height="23" Margin="5" Grid.Row="1" TextWrapping="Wrap" TextAlignment="Center"/>
+        <TextBlock Text="Input amount here:" Margin="5" Grid.Row="2" HorizontalAlignment="Center"/>
+        <TextBox Name="Amount" Text="0" HorizontalAlignment="Stretch" Height="23" Margin="5" Grid.Row="3" TextWrapping="Wrap" TextAlignment="Center"/>
+        
+        <Button Content="Add" Margin="5" Grid.Row="3" Height="21" VerticalAlignment="Bottom" Click="Button_Click"/>
+    </Grid>
+</Window>

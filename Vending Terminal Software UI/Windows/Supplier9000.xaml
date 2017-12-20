@@ -32,5 +32,10 @@
         <TextBox Name="textBoxPrice"  Grid.Column="1" Height="23" Margin="5,79,5,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" IsEnabled="False"/>
         <Label Content="Amount:" Grid.Column="1" Margin="10,2,10,0" Grid.Row="2" Height="26" VerticalAlignment="Top" HorizontalAlignment="Center"/>
         <Label Content="Price (for products):" Grid.Column="1" Margin="5,53,5,0" Grid.Row="2" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+
+        <Button Name="AddNew" Content="Add new local product" Grid.Column="1" Margin="10,0,10,35" Grid.Row="2" Height="20" VerticalAlignment="Bottom" Click="AddNew_Click"/>
+        <Button Name="Delete" Content="Delete" Grid.Column="1" Margin="10,0,10,10" Grid.Row="2" Height="20" VerticalAlignment="Bottom" IsEnabled="False" Click="Delete_Click"/>
+
+        <Button Name="TaskA" Content="Task A" Grid.Column="1" Margin="10,0,10,60" Grid.Row="2" Click="TaskA_Click" Height="20" VerticalAlignment="Bottom"/>
     </Grid>
 </Window>

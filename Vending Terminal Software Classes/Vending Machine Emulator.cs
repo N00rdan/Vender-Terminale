@@ -8,13 +8,17 @@ namespace Vending_Terminal_Software_Classes
 {
     public class Vending_Machine_Emulator
     {
+        public string TerminalLocation;
+
+        public Context context = new Context();
+
         int BiggestCoin;
 
         public DataBase Data = new DataBase();
 
         List<Banknotes_n_Coins> ChangeList = new List<Banknotes_n_Coins>(); string ChangeString;
 
-        public Product pCopy { get; set; }
+        public CurrentProduct pCopy { get; set; }
 
         public event Action MainRefresh;
 
@@ -29,13 +33,22 @@ namespace Vending_Terminal_Software_Classes
 
         public void Buy()
         {
-            Data.CurrentState.Money -= pCopy.Price;
+            context.CurrentStates.First(n => n.Location == TerminalLocation).Money -= pCopy.Price;
 
-            var Product = Data.CurrentState.Product.Find(n => n == pCopy);
+            var Product = context.CurrentStates
+                .Include(cs => cs.Product)
+                .First(n => n.Location == TerminalLocation)
+                .Product.Find(n => n.Code == context.Info
+                .First(m => m.Name == pCopy.Name).Code);
 
             Product.Amount -= 1;
 
-            Data.Save();
+            context.CurrentStates
+                .Include(cs => cs.Sales)
+                .First(n => n.Location == TerminalLocation)
+                .Sales.Add(new Sale { Code = Product.Code, Date = DateTime.Now });
+
+            context.SaveChanges();
 
             MR();
         }
@@ -49,12 +62,16 @@ namespace Vending_Terminal_Software_Classes
                 ComplicatedChange();
             }
 
-            while (Data.CurrentState.Money > 0)
+            while (context.CurrentStates.First(n => n.Location == TerminalLocation).Money > 0)
             {
-                var Coin = Data.CurrentState.Banknotes_n_Coins.Find(n => n.Cost <= Data.CurrentState.Money & n.Amount > 0 & n.CanBeChange == true);
+                var Coin = context.CurrentStates
+                    .Include(cs => cs.Banknotes_n_Coins)
+                    .First(n => n.Location == TerminalLocation)
+                    .Banknotes_n_Coins.Find(n => n.Cost <= context.CurrentStates
+                    .First(m => m.Location == TerminalLocation).Money & n.Amount > 0 & n.CanBeChange == true);
 
                 Coin.Amount -= 1;
-                Data.CurrentState.Money -= Coin.Cost;
+                context.CurrentStates.First(n => n.Location == TerminalLocation).Money -= Coin.Cost;
 
                 // Given coins counter
 
@@ -69,7 +86,7 @@ namespace Vending_Terminal_Software_Classes
                 }
             }
 
-            Data.Save();
+            context.SaveChanges();
 
             // ChangeString creater
 
@@ -86,19 +103,19 @@ namespace Vending_Terminal_Software_Classes
 
         public void ComplicatedChange() // This change method gives only 1 5₽ coin
         {
-            Data.CurrentState.Money -= 5;
+            context.CurrentStates.First(n => n.Location == TerminalLocation).Money -= 5;
 
-            var Coin = Data.CurrentState.Banknotes_n_Coins.Find(n => n.Cost == 5);
+            var Coin = context.CurrentStates.Include(cs => cs.Banknotes_n_Coins).First(n => n.Location == TerminalLocation).Banknotes_n_Coins.Find(n => n.Cost == 5);
             Coin.Amount -= 1;
 
             ChangeList.Add(new Banknotes_n_Coins { Cost = 5, Amount = 1 });
 
-            while (Data.CurrentState.Money > 0)
+            while (context.CurrentStates.First(n => n.Location == TerminalLocation).Money > 0)
             {
-                Coin = Data.CurrentState.Banknotes_n_Coins.Find(n => n.Cost <= Data.CurrentState.Money & n.Amount > 0 & n.CanBeChange == true & n.Cost != 5);
+                Coin = context.CurrentStates.Include(cs => cs.Banknotes_n_Coins).First(n => n.Location == TerminalLocation).Banknotes_n_Coins.Find(n => n.Cost <= context.CurrentStates.First(m => m.Location == TerminalLocation).Money & n.Amount > 0 & n.CanBeChange == true & n.Cost != 5);
 
                 Coin.Amount -= 1;
-                Data.CurrentState.Money -= Coin.Cost;
+                context.CurrentStates.First(n => n.Location == TerminalLocation).Money -= Coin.Cost;
 
                 // Given coins counter
 
@@ -116,40 +133,48 @@ namespace Vending_Terminal_Software_Classes
 
         public void MoneyAdd(int value)
         {
-            var Coin = Data.CurrentState.Banknotes_n_Coins.Find(n => n.Cost == value);
+            var Coin = context.CurrentStates.Include(cs => cs.Banknotes_n_Coins).First(n => n.Location == TerminalLocation).Banknotes_n_Coins.Find(n => n.Cost == value);
 
             Coin.Amount += 1;
-            Data.CurrentState.Money += value;
+            context.CurrentStates.First(n => n.Location == TerminalLocation).Money += value;
 
-            Data.Save();
+            context.SaveChanges();
 
             MR();
         }
 
         public bool ChangeCount(int tag)
         {
-            BiggestCoin = Data.CurrentState.Banknotes_n_Coins.Find(n => n.CanBeChange == true).Cost;
+            BiggestCoin = context.CurrentStates
+                .Include(cs => cs.Banknotes_n_Coins)
+                .First(n => n.Location == TerminalLocation)
+                .Banknotes_n_Coins.Find(n => n.CanBeChange == true)
+                .Cost;
 
             if (tag <= BiggestCoin)
                 return true;
 
             int tmp = 0;
-            var Change = Data.CurrentState.Banknotes_n_Coins.FindAll(n => n.CanBeChange == true);
 
-            foreach (Banknotes_n_Coins B in Change)
+            using (var context = new Context())
             {
-                tmp += B.Cost * B.Amount;
-            }
+                var Change = context.CurrentStates.Include(cs => cs.Banknotes_n_Coins).First(n => n.Location == TerminalLocation).Banknotes_n_Coins.FindAll(n => n.CanBeChange == true);
 
-            if (tag + Data.CurrentState.Money <= tmp)
-                return true;
-            else
-                return false;
+                foreach (Banknotes_n_Coins B in Change)
+                {
+                    tmp += B.Cost * B.Amount;
+                }
+
+                if (tag + context.CurrentStates.First(n => n.Location == TerminalLocation).Money <= tmp)
+                    return true;
+                else
+                    return false;
+            }
         }
 
         public bool GiveFive() // Check amount of 1₽ coins and if change is odd
         {
-            if (Data.CurrentState.Banknotes_n_Coins.Find(n => n.Cost == 1).Amount == 0 & Data.CurrentState.Money % 2 == 1)
+            if (context.CurrentStates.Include(cs => cs.Banknotes_n_Coins).First(n => n.Location == TerminalLocation).Banknotes_n_Coins.Find(n => n.Cost == 1).Amount == 0 & context.CurrentStates.First(n => n.Location == TerminalLocation).Money % 2 == 1)
                 return true;
             else
                 return false;
@@ -159,9 +184,9 @@ namespace Vending_Terminal_Software_Classes
         {
             try
             {
-                if (pCopy.Price <= Data.CurrentState.Money & pCopy.Amount > 0)
+                if (pCopy.Price <= context.CurrentStates.First(n => n.Location == TerminalLocation).Money & pCopy.Amount > 0)
                 {
-                    if (Data.CurrentState.Banknotes_n_Coins.Find(n => n.Cost == 1).Amount == 0 & Data.CurrentState.Money - pCopy.Price < 5)
+                    if (context.CurrentStates.Include(cs => cs.Banknotes_n_Coins).First(n => n.Location == TerminalLocation).Banknotes_n_Coins.Find(n => n.Cost == 1).Amount == 0 & context.CurrentStates.First(n => n.ID == 1).Money - pCopy.Price < 5)
                         return false;
                     return true;
                 }

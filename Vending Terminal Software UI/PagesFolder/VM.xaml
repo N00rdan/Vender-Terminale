@@ -40,7 +40,8 @@
             </ListBox.ItemTemplate>
         </ListBox>
 
-        <Button Name="Buy" IsEnabled="False" Content="Buy" Grid.Column="1" Margin="10,0,10,38" Height="40" VerticalAlignment="Bottom" Click="Buy_Click"/>
-        <Button Name="Change" IsEnabled="False" Content="Get change" Grid.Column="1" Margin="20,0,20,10" Height="23" VerticalAlignment="Bottom" Click="Change_Click"/>
+        <Button Name="Buy" IsEnabled="False" Content="Buy" Grid.Column="1" Margin="10,0,10,60" Height="40" VerticalAlignment="Bottom" Click="Buy_Click"/>
+        <Button Name="Change" IsEnabled="False" Content="Get change" Grid.Column="1" Margin="20,0,20,32" Height="23" VerticalAlignment="Bottom" Click="Change_Click"/>
+        <Button Content="Exit terminal" Grid.Column="1" Margin="10,0,10,5" Height="20" VerticalAlignment="Bottom" Click="Button_Click"/>
     </Grid>
 </Page>

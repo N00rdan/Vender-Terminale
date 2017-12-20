@@ -13,6 +13,6 @@ namespace Vending_Terminal_Software_UI
     /// </summary>
     public partial class App : Application
     {
-
+        public string Location;
     }
 }

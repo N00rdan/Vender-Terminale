@@ -5,6 +5,8 @@ namespace Vending_Terminal_Software_Classes
 {
     public class Banknotes_n_Coins : Item
     {
+        public int ID { get; set; }
+
         public int Cost { get; set; }
 
         public bool CanBeChange { get; set; }

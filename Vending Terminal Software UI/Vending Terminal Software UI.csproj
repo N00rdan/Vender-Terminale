@@ -64,14 +64,41 @@
     <Compile Include="Windows\AddMoney.xaml.cs">
       <DependentUpon>AddMoney.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windows\AddNew.xaml.cs">
+      <DependentUpon>AddNew.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\AddNewGlobal.xaml.cs">
+      <DependentUpon>AddNewGlobal.xaml</DependentUpon>
+    </Compile>
     <Compile Include="PagesFolder\Pages.cs" />
+    <Compile Include="PagesFolder\SelectVM.xaml.cs">
+      <DependentUpon>SelectVM.xaml</DependentUpon>
+    </Compile>
     <Compile Include="PagesFolder\VM.xaml.cs">
       <DependentUpon>VM.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Linq\Task A.xaml.cs">
+      <DependentUpon>Task A.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Linq\Task B.xaml.cs">
+      <DependentUpon>Task B.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\Supplier9000.xaml.cs">
       <DependentUpon>Supplier9000.xaml</DependentUpon>
     </Compile>
     <Page Include="Windows\AddMoney.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\AddNew.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\AddNewGlobal.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Linq\Task A.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -87,9 +114,17 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="PagesFolder\SelectVM.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="PagesFolder\VM.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\Linq\Task B.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Windows\Supplier9000.xaml">
       <SubType>Designer</SubType>

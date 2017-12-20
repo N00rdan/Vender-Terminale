@@ -50,11 +50,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Context.cs" />
+    <Compile Include="Migrations\201711141533296_InitialCreate.cs" />
+    <Compile Include="Migrations\201711141533296_InitialCreate.Designer.cs">
+      <DependentUpon>201711141533296_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Banknotes%27n%27Coins.cs" />
     <Compile Include="CurrentState.cs" />
     <Compile Include="DataBase.cs" />
+    <Compile Include="Model\CurrentProduct.cs" />
+    <Compile Include="Model\Info.cs" />
     <Compile Include="Model\Basic\Item.cs" />
     <Compile Include="Model\Product.cs" />
+    <Compile Include="Model\Sale.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Vending Machine Emulator.cs" />
   </ItemGroup>
@@ -63,6 +72,11 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201711141533296_InitialCreate.resx">
+      <DependentUpon>201711141533296_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

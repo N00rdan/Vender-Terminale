@@ -1,0 +1,12 @@
+﻿<Window x:Class="Vending_Terminal_Software_UI.Windows.Linq.Task_A"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Vending_Terminal_Software_UI.Windows.Linq"
+        mc:Ignorable="d"
+        Title="Task_A" Height="310" Width="200" MaxHeight="310" MaxWidth="200" Loaded="Window_Loaded">
+    <Grid>
+        <ListBox DisplayMemberPath="Location" Name="TaskA" Margin="5"/>
+    </Grid>
+</Window>
